@@ -63,9 +63,9 @@ class App extends Component {
         </ul>
         <div className="Form">
           <input value={this.state.list} onChange={this.addText} type="text"/>
-          <button onClick={this.sendToDo}>Add</button>
+          <button className="button-add" onClick={this.sendToDo}>Add</button>
         </div>
-        <div>
+        <div className="list">
           {this.state.item.map((list, index) => <ListDo key={index} list={list}
             remove={()=>{this.remove(index)}}
           />)}

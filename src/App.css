@@ -56,5 +56,22 @@ body {
   border-left: 5px solid lightBlue;
   transition: all 0.55s;
   color: white;
+}
 
+.button-add {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  width: 45%;
+  border-radius: 10px;
+}
+
+.list {
+  background-color: grey;
+  padding: 20px;
+  text-align: center;
+}
+
+.button-remove {
+  cursor: pointer;
 }
