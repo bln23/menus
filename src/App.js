@@ -38,7 +38,7 @@ handleDropDown(){
               icon="angle-down"
               visible={this.state.expanded}
               handleExpanded={this.handleExpanded}/>
-            <Category name="Estructura" items={['Div','Lista','Header','Footer']}
+            <Category name="Estructura" items={['div','ul','header','footer']}
               icon="angle-down"
               visible={this.state.expanded}
               handleExpanded={this.handleExpanded}/>
