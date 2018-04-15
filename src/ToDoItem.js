@@ -7,11 +7,11 @@ class ToDoItem extends Component {
 
   render() {
     return (
-      <div>
+      <li>
         {/*<span onClick={this.props.mark}>✔️</span>*/}
         <h3 className="textlist">{this.props.itemList}</h3>
         <span className="button-remove" onClick={this.props.remove}>❌</span>
-      </div>
+      </li>
     );
   }
 }

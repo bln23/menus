@@ -65,13 +65,13 @@ class App extends Component {
           <input value={this.state.list} onChange={this.addText} type="text"/>
           <button className="button-add" onClick={this.sendToDo}>Add</button>
         </div>
-        <div className="list">
+        <ul className="list">
           {this.state.item.map((itemList, index) => <ToDoItem key={index} itemList={itemList}
-            remove={()=>{this.remove(index)}}
-          />)}
-        </div>
+            remove={()=>{this.remove(index)}}/>
+          )}
+        </ul>
       </div>
-    );
+    )
   }
 }
 
