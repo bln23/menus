@@ -22,15 +22,17 @@ body {
   list-style-type: none;
 }
 
-.category h3 {
+.category button {
   font-size: 20px;
   line-height: 50px;
   padding: 0 10px;
   margin: 0;
+  width: 100%;
   background-color: black;
+  color: white;
   cursor: pointer;
   border: 1px solid rgb(255,255,255,0.1);
-  border-radius: 4px;
+  border-radius: 5px;
   -webkit-box-shadow: inset 0px 0px 55px -15px rgba(255,255,255,0.67);
   -moz-box-shadow: inset 0px 0px 55px -15px rgba(255,255,255,0.67);
   box-shadow: inset 0px 0px 55px -15px rgba(255,255,255,0.67);
@@ -58,20 +60,6 @@ body {
   color: white;
 }
 
-.button-add {
-  background-color: black;
-  color: white;
-  cursor: pointer;
-  width: 45%;
-  border-radius: 10px;
-}
-
-.list {
-  background-color: grey;
-  padding: 20px;
-  text-align: center;
-}
-
-.button-remove {
-  cursor: pointer;
+.fa {
+  margin: 0 5px;
 }

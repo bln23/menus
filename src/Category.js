@@ -16,7 +16,9 @@ class Category extends Component {
   render() {
     return (
         <li className="category">
-          <h3 onClick={this.handleClick} id={this.props.name}><Icon className="icon" name={this.props.icon} />{this.props.name}</h3>
+          <button onClick={this.handleClick} id={this.props.name}>{this.props.name}
+            <Icon className="icon" name={this.props.icon}/></button>
+
           <ul className={this.props.name === this.props.visible ? 'visible' : 'no-visible'}>
             {this.props.items.map((item)=>{
               return <MenuItem name={item} key={item}/>
