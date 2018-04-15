@@ -15,8 +15,7 @@ class Category extends Component {
 
   render() {
     return (
-      <div className="category">
-        <li>
+        <li className="category">
           <h3 onClick={this.handleClick} id={this.props.name}><Icon className="icon" name={this.props.icon} />{this.props.name}</h3>
           <ul className={this.props.name === this.props.visible ? 'visible' : 'no-visible'}>
             {this.props.items.map((item)=>{
@@ -24,7 +23,6 @@ class Category extends Component {
             })}
           </ul>
         </li>
-      </div>
     );
   }
 }
