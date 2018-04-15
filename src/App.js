@@ -7,8 +7,7 @@ class App extends Component {
     super(props);
     this.state = {
       expanded: '',
-      item: '',
-      opened: false
+      opened: ''
     }
     this.handleExpanded = this.handleExpanded.bind(this);
     this.handleDropDown = this.handleDropDown.bind(this);
@@ -20,11 +19,6 @@ class App extends Component {
     })
   }
 
-  mark = index => {
-  const item = [...this.state.item]
-  item.splice(index, 1)
-  this.setState({ item: item})
-}
 
 handleDropDown(){
   this.setState({
@@ -57,7 +51,6 @@ handleDropDown(){
         <button onClick={this.handleDropDown} className="buttonDropDown">COMPONENTS
         </button>
           <button onClick={this.handleDropDown} className="buttonDropDown icon">{this.state.opened ? '\u25B2' : '\u25BC'}</button>
-
           <div className="options">
             {this.state.opened &&
             <ul>
