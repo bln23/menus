@@ -7,8 +7,11 @@ class App extends Component {
     super(props);
     this.state = {
       expanded: '',
+      item: '',
+      opened: false
     }
     this.handleExpanded = this.handleExpanded.bind(this);
+    this.handleDropDown = this.handleDropDown.bind(this);
   }
 
   handleExpanded(pExpanded){
@@ -16,6 +19,18 @@ class App extends Component {
       expanded: pExpanded
     })
   }
+
+  mark = index => {
+  const item = [...this.state.item]
+  item.splice(index, 1)
+  this.setState({ item: item})
+}
+
+handleDropDown(){
+  this.setState({
+    opened: !this.state.opened
+  })
+}
 
   render() {
     return (
@@ -38,6 +53,22 @@ class App extends Component {
               visible={this.state.expanded}
               handleExpanded={this.handleExpanded}/>
         </ul>
+        <div className="buttons">
+        <button onClick={this.handleDropDown} className="buttonDropDown">COMPONENTS
+        </button>
+          <button onClick={this.handleDropDown} className="buttonDropDown icon">{this.state.opened ? '\u25B2' : '\u25BC'}</button>
+
+          <div className="options">
+            {this.state.opened &&
+            <ul>
+              <li className="option">option 1</li>
+              <li className="option">option 2</li>
+              <li className="option">option 3</li>
+            </ul>
+          }
+          </div>
+          </div>
+
       </div>
     )
   }
