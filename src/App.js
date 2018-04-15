@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Category from './Category.js';
-import ListDo from './ListDo.js';
+import ToDoItem from './ToDoItem.js';
 
 class App extends Component {
   constructor(props){
@@ -66,7 +66,7 @@ class App extends Component {
           <button className="button-add" onClick={this.sendToDo}>Add</button>
         </div>
         <div className="list">
-          {this.state.item.map((list, index) => <ListDo key={index} list={list}
+          {this.state.item.map((itemList, index) => <ToDoItem key={index} itemList={itemList}
             remove={()=>{this.remove(index)}}
           />)}
         </div>
