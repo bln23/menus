@@ -4,11 +4,9 @@ class MenuItem extends Component {
 
   render() {
     return (
-      <div className="category">
-        <li>
+        <li className="category">
           <a href='#'>{this.props.name}</a>
         </li>
-      </div>
     );
   }
 }
