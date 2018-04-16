@@ -9,8 +9,8 @@ class Category extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(event){
-    this.props.handleExpanded(event.target.id);
+  handleClick(){
+    this.props.handleExpanded(this.props.name);
   }
 
   render() {
@@ -19,7 +19,7 @@ class Category extends Component {
           <button onClick={this.handleClick} id={this.props.name}>{this.props.name}
             <Icon className="icon" name={this.props.icon}/></button>
 
-          <ul className={this.props.name === this.props.visible ? 'visible' : 'no-visible'}>
+          <ul className={this.props.visible ? 'visible' : 'no-visible'}>
             {this.props.items.map((item)=>{
               return <MenuItem name={item} key={item}/>
             })}

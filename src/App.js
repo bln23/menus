@@ -13,9 +13,9 @@ class App extends Component {
     this.handleDropDown = this.handleDropDown.bind(this);
   }
 
-  handleExpanded(pExpanded){
+  handleExpanded(expandedCategory){
     this.setState({
-      expanded: pExpanded
+      expanded: expandedCategory === this.state.expanded ? '' : expandedCategory
     })
   }
 
@@ -32,19 +32,19 @@ handleDropDown(){
         <ul>
             <Category name="Lenguajes" items={['HTML','CSS','JavaScript']}
               icon="angle-down"
-              visible={this.state.expanded}
+              visible={this.state.expanded === 'Lenguajes'}
               handleExpanded={this.handleExpanded}/>
             <Category name="Frameworks" items={['React','Vue','Angular']}
               icon="angle-down"
-              visible={this.state.expanded}
+              visible={this.state.expanded  === 'Frameworks'}
               handleExpanded={this.handleExpanded}/>
             <Category name="Estructura" items={['div','ul','header','footer']}
               icon="angle-down"
-              visible={this.state.expanded}
+              visible={this.state.expanded  === 'Estructura'}
               handleExpanded={this.handleExpanded}/>
             <Category name="Enlaces" items={['Enlace 1','Enlace 2','Enlace 3']}
               icon="angle-down"
-              visible={this.state.expanded}
+              visible={this.state.expanded  === 'Enlaces'}
               handleExpanded={this.handleExpanded}/>
         </ul>
         <div className="buttons">
